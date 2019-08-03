@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		CAAD2F1422F55350004310C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F1322F55350004310C1 /* AppDelegate.swift */; };
-		CAAD2F1622F55350004310C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F1522F55350004310C1 /* ViewController.swift */; };
 		CAAD2F1922F55350004310C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAD2F1722F55350004310C1 /* Main.storyboard */; };
 		CAAD2F1B22F55351004310C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAAD2F1A22F55351004310C1 /* Assets.xcassets */; };
 		CAAD2F1E22F55351004310C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAD2F1C22F55351004310C1 /* LaunchScreen.storyboard */; };
 		CAAD2F2922F55351004310C1 /* SimpleMVVMNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F2822F55351004310C1 /* SimpleMVVMNetworkTests.swift */; };
 		CAAD2F3422F55351004310C1 /* SimpleMVVMNetworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F3322F55351004310C1 /* SimpleMVVMNetworkUITests.swift */; };
+		CAAD2F4322F55490004310C1 /* BreachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F4222F55490004310C1 /* BreachViewModel.swift */; };
+		CAAD2F4622F55497004310C1 /* BreachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F4522F55497004310C1 /* BreachModel.swift */; };
+		CAAD2F4822F554C9004310C1 /* BreachesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F4722F554C9004310C1 /* BreachesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		CAAD2F1022F55350004310C1 /* SimpleMVVMNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMVVMNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAD2F1322F55350004310C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAAD2F1522F55350004310C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CAAD2F1822F55350004310C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAAD2F1A22F55351004310C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAAD2F1D22F55351004310C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		CAAD2F2F22F55351004310C1 /* SimpleMVVMNetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleMVVMNetworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAD2F3322F55351004310C1 /* SimpleMVVMNetworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMVVMNetworkUITests.swift; sourceTree = "<group>"; };
 		CAAD2F3522F55351004310C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAAD2F4222F55490004310C1 /* BreachViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachViewModel.swift; sourceTree = "<group>"; };
+		CAAD2F4522F55497004310C1 /* BreachModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachModel.swift; sourceTree = "<group>"; };
+		CAAD2F4722F554C9004310C1 /* BreachesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				CAAD2F1322F55350004310C1 /* AppDelegate.swift */,
-				CAAD2F1522F55350004310C1 /* ViewController.swift */,
+				CAAD2F4722F554C9004310C1 /* BreachesViewController.swift */,
+				CAAD2F4122F55490004310C1 /* ViewModel */,
+				CAAD2F4422F55497004310C1 /* Model */,
 				CAAD2F1722F55350004310C1 /* Main.storyboard */,
 				CAAD2F1A22F55351004310C1 /* Assets.xcassets */,
 				CAAD2F1C22F55351004310C1 /* LaunchScreen.storyboard */,
@@ -123,6 +129,22 @@
 				CAAD2F3522F55351004310C1 /* Info.plist */,
 			);
 			path = SimpleMVVMNetworkUITests;
+			sourceTree = "<group>";
+		};
+		CAAD2F4122F55490004310C1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CAAD2F4222F55490004310C1 /* BreachViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CAAD2F4422F55497004310C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CAAD2F4522F55497004310C1 /* BreachModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +278,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAAD2F1622F55350004310C1 /* ViewController.swift in Sources */,
+				CAAD2F4322F55490004310C1 /* BreachViewModel.swift in Sources */,
+				CAAD2F4622F55497004310C1 /* BreachModel.swift in Sources */,
 				CAAD2F1422F55350004310C1 /* AppDelegate.swift in Sources */,
+				CAAD2F4822F554C9004310C1 /* BreachesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
