@@ -20,8 +20,6 @@ class BreachesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         tableView.dataSource = self
@@ -40,7 +38,15 @@ class BreachesViewController: UIViewController {
             ])
         
         
-        
+        breachesViewModel.fetchBreaches{ [weak self] breaches in
+            DispatchQueue.main.async {
+                self?.updateUI()
+            }
+        }
+    }
+    
+    func updateUI() {
+        tableView.reloadData()
     }
 }
 
@@ -59,7 +65,5 @@ extension BreachesViewController: UITableViewDataSource {
     }
 }
 
-extension BreachesViewController: UITableViewDelegate {
-    
-}
+extension BreachesViewController: UITableViewDelegate { }
 

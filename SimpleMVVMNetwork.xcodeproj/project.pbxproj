@@ -16,6 +16,8 @@
 		CAAD2F4322F55490004310C1 /* BreachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F4222F55490004310C1 /* BreachViewModel.swift */; };
 		CAAD2F4622F55497004310C1 /* BreachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F4522F55497004310C1 /* BreachModel.swift */; };
 		CAAD2F4822F554C9004310C1 /* BreachesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F4722F554C9004310C1 /* BreachesViewController.swift */; };
+		CAAD2F9A22F573F8004310C1 /* ConstantsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F9922F573F8004310C1 /* ConstantsAPI.swift */; };
+		CAAD2F9D22F57419004310C1 /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD2F9C22F57419004310C1 /* HTTPManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		CAAD2F4222F55490004310C1 /* BreachViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachViewModel.swift; sourceTree = "<group>"; };
 		CAAD2F4522F55497004310C1 /* BreachModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachModel.swift; sourceTree = "<group>"; };
 		CAAD2F4722F554C9004310C1 /* BreachesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachesViewController.swift; sourceTree = "<group>"; };
+		CAAD2F9922F573F8004310C1 /* ConstantsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsAPI.swift; sourceTree = "<group>"; };
+		CAAD2F9C22F57419004310C1 /* HTTPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				CAAD2F4122F55490004310C1 /* ViewModel */,
 				CAAD2F4422F55497004310C1 /* Model */,
 				CAAD2F1722F55350004310C1 /* Main.storyboard */,
+				CAAD2F9E22F5741D004310C1 /* Services */,
+				CAAD2F9B22F573FB004310C1 /* Others */,
 				CAAD2F1A22F55351004310C1 /* Assets.xcassets */,
 				CAAD2F1C22F55351004310C1 /* LaunchScreen.storyboard */,
 				CAAD2F1F22F55351004310C1 /* Info.plist */,
@@ -145,6 +151,22 @@
 				CAAD2F4522F55497004310C1 /* BreachModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CAAD2F9B22F573FB004310C1 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				CAAD2F9922F573F8004310C1 /* ConstantsAPI.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		CAAD2F9E22F5741D004310C1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CAAD2F9C22F57419004310C1 /* HTTPManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +303,9 @@
 				CAAD2F4322F55490004310C1 /* BreachViewModel.swift in Sources */,
 				CAAD2F4622F55497004310C1 /* BreachModel.swift in Sources */,
 				CAAD2F1422F55350004310C1 /* AppDelegate.swift in Sources */,
+				CAAD2F9D22F57419004310C1 /* HTTPManager.swift in Sources */,
 				CAAD2F4822F554C9004310C1 /* BreachesViewController.swift in Sources */,
+				CAAD2F9A22F573F8004310C1 /* ConstantsAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

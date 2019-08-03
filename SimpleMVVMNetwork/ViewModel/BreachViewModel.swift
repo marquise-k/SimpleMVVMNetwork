@@ -15,13 +15,26 @@ class BreachViewModel {
             breaches = inputModel
         }
     }
-    
-    var breaches: [BreachModel] = [BreachModel(title: "000webhost"),BreachModel(title: "126")]
-    
+    var breaches = [BreachModel]()
 }
 
 extension BreachViewModel {
     func fetchBreaches(completion: @escaping (Result<[BreachModel], Error>) -> Void) {
-        completion(.success(breaches))
+        HTTPManager.shared.get(urlString: baseUrl + breachesExtensionURL, completionBlock: { [weak self] result in
+            guard let self = self else {return}
+            switch result {
+            case .failure(let error):
+                print ("failure", error)
+            case .success(let dta) :
+                let decoder = JSONDecoder()
+                do
+                {
+                    self.breaches = try decoder.decode([BreachModel].self, from: dta)
+                    completion(.success(try decoder.decode([BreachModel].self, from: dta)))
+                } catch {
+                    // deal with error from JSON decoding if used in production
+                }
+            }
+        })
     }
 }
